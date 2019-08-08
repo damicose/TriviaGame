@@ -5,5 +5,11 @@
 
 // Track which answer options for each question are correct/incorrect
 // Programatically evaluate right/wrong and spit out those values
+// 
+let right = 0
+let wrong = 0
 
+function checkAns() {
+if
+}
 // Reset game upon clicking an 'ok' button on right/wrong screen (no refresh)
