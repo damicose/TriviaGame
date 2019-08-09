@@ -9,23 +9,17 @@
 let right = 0
 let wrong = 0
 
-// function chose() {
-    
-// }
+
 
 function uncheck() {
-    document.querySelectorAll("custom-control-input").checked = false;
-  }
+    document.querySelectorAll("radio").checked = false;
+}
 
 function reset() {
     uncheck();
     right = 0;
     wrong = 0;
-    // document.getElementById("1customRadioInline2").classList.remove("chosen");
-    // document.getElementById("2customRadioInline3").classList.remove("chosen");
-    // document.getElementById("3customRadioInline1").classList.remove("chosen");
-    // document.getElementById("4customRadioInline4").classList.remove("chosen");
-    // document.getElementById("5customRadioInline2").classList.remove("chosen");
+
 }
 
 function results() {
@@ -34,51 +28,51 @@ function results() {
 }
 
 function startTime() {
-    setTimeout(checkAns, 5000);
+    setTimeout(checkAns, 1000 * 6);
 }
 
-// document.getElementById("1customRadioInline2").addEventListener("change", chose())
-// document.getElementById("2customRadioInline3").addEventListener("change", chose())
-// document.getElementById("3customRadioInline1").addEventListener("change", chose())
-// document.getElementById("4customRadioInline4").addEventListener("change", chose())
-// document.getElementById("5customRadioInline2").addEventListener("change", chose())
+function gameStart() {
+    reset()
+}
 
 
-let isCheck1 = document.getElementById("1customRadioInline2").checked
-let isCheck2 = document.getElementById("2customRadioInline3").checked
-let isCheck3 = document.getElementById("3customRadioInline1").checked
-let isCheck4 = document.getElementById("4customRadioInline4").checked
-let isCheck5 = document.getElementById("5customRadioInline2").checked
+
 
 
 
 function checkAns() {
-    
-    if (isCheck1 = true) {
+
+    let isCheck1 = document.getElementById("1customRadioInline2").checked
+    let isCheck2 = document.getElementById("2customRadioInline3").checked
+    let isCheck3 = document.getElementById("3customRadioInline1").checked
+    let isCheck4 = document.getElementById("4customRadioInline4").checked
+    let isCheck5 = document.getElementById("5customRadioInline2").checked
+
+    if (isCheck1 === true) {
         right++
     }
     else {
         wrong++
     }
-    if (isCheck2 = true) {
+    if (isCheck2 === true) {
         right++
     }
     else {
         wrong++
     }
-    if (isCheck3 = true) {
+    if (isCheck3 === true) {
         right++
     }
     else {
         wrong++
     }
-    if (isCheck4 = true) {
+    if (isCheck4 === true) {
         right++
     }
     else {
         wrong++
     }
-    if (isCheck5) {
+    if (isCheck5 === true) {
         right++
     }
     else {
@@ -87,7 +81,10 @@ function checkAns() {
     results()
 }
 
-document.getElementById("timer").addEventListener("click", startTime())
+gameStart()
 
-document.getElementById("submit").addEventListener("click", checkAns())
+
+document.getElementById("timer").addEventListener("click", startTime)
+
+document.getElementById("submit").addEventListener("click", checkAns)
 // Reset game upon clicking an 'ok' button on right/wrong screen (no refresh)
