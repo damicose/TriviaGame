@@ -9,17 +9,11 @@
 let right = 0
 let wrong = 0
 
-
-
-function uncheck() {
-    document.querySelectorAll("radio").checked = false;
-}
-
 function reset() {
-    uncheck();
+    document.querySelectorAll("answer").checked = false;
     right = 0;
     wrong = 0;
-
+    //can't seem to hit the right selector to get the radio buttons to reset and I don't want to manually write out every element--should've for looped?
 }
 
 function results() {
@@ -28,17 +22,12 @@ function results() {
 }
 
 function startTime() {
-    setTimeout(checkAns, 1000 * 6);
+    setTimeout(checkAns, 1000 * 30);
 }
 
 function gameStart() {
     reset()
 }
-
-
-
-
-
 
 function checkAns() {
 
@@ -78,13 +67,12 @@ function checkAns() {
     else {
         wrong++
     }
-    results()
+    results();
+    reset()
 }
 
-gameStart()
-
-
 document.getElementById("timer").addEventListener("click", startTime)
-
 document.getElementById("submit").addEventListener("click", checkAns)
+
+
 // Reset game upon clicking an 'ok' button on right/wrong screen (no refresh)

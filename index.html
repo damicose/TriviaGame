@@ -6,9 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Dune Trivia</title>
     <link rel="stylesheet" href="assets/css/reset.css">
-    <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css">
+
 </head>
 
 <body>
@@ -16,11 +17,18 @@
     <div class="container text-center" id="header">Dune Trivia</div>
     <br>
     <br>
-    <!-- Create display that shows remaining time (make sticky?) -->
-    <div class="container">
-        <button type="button" id="timer" class="btn btn-primary">START TIMER</button>
+    <div class="row text-center">
+        <div class="container text-center" id="instruct"> Click the button below to start a 30 second timer!</div>
     </div>
-    <!-- Create container that displays 10 questions each with four options /sike/ -->
+    <br>
+    <!-- Create display that shows remaining time (make sticky?) -->
+    <div class="row">
+        <div class="col-5"></div>
+        <div class="col"><button type="button" id="timer" class="ml-5 btn btn-lg btn-danger">START TIMER</button></div>
+        <div class="col-5"></div>
+        
+    </div>
+    <!-- Create container that displays 10 questions each with four options /sike make it 5/ -->
     <div class="container" id="quest">
         <hr>
         <div class="row">Question 1: In the Fremen language a muad'dib is what kind of desert creature?</div>
@@ -158,13 +166,17 @@
 
 
         </div>
-<br><br>
-        <div class="container justify-content-center">
-            <button type="button" id="submit" class="btn btn-primary ">RESULTS</button>
-        </div>
+
+        
 
     </div>
-
+    <br><br>
+    <div class="row">
+            <div class="col-5"></div>
+            <div><button type="button" id="submit" class="ml-5 btn btn-lg btn-danger "> RESULTS </button></div>
+            <div class="col-5"></div>
+            
+        </div>
     <!-- Create alert? or maybe just update html to show results (how many right/wrong, which?) ?innerHtml quest div??-->
 
     <!-- Link it to your portfolio!!! -->

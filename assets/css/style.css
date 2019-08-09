@@ -1,0 +1,27 @@
+body {
+    justify-content: center;
+    background: sandybrown;
+}
+
+#submit, #timer {
+align-content: center;
+}
+
+#instruct {
+    background: white;
+    font-size: 15px;
+    border-radius: 30px;
+    font-weight: bold
+}
+
+#header {
+    font-size: 45px;
+    background: chocolate;
+    border-radius: 30px;
+    font-weight: bolder
+}
+
+#quest {
+    font-size: 18px;
+    font-weight: bold
+}
