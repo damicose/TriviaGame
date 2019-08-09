@@ -13,9 +13,13 @@
 
 <body>
     <!-- Create header -->
-    <div class="container" id="header">Dune Trivia</div>
+    <div class="container text-center" id="header">Dune Trivia</div>
+    <br>
+    <br>
     <!-- Create display that shows remaining time (make sticky?) -->
-    <div class="container" id="timer"></div>
+    <div class="container">
+        <button type="button" id="timer" class="btn btn-primary">START TIMER</button>
+    </div>
     <!-- Create container that displays 10 questions each with four options /sike/ -->
     <div class="container" id="quest">
         <hr>
@@ -127,7 +131,8 @@
 
         </div>
         <hr>
-        <div class="row">Question 5: Which profession developed as a replacement for computers after they were banned?</div>
+        <div class="row">Question 5: Which profession developed as a replacement for computers after they were banned?
+        </div>
         <br>
         <div class="row">
 
@@ -153,13 +158,17 @@
 
 
         </div>
-
+<br><br>
+        <div class="container justify-content-center">
+            <button type="button" id="submit" class="btn btn-primary ">RESULTS</button>
+        </div>
 
     </div>
 
     <!-- Create alert? or maybe just update html to show results (how many right/wrong, which?) ?innerHtml quest div??-->
 
     <!-- Link it to your portfolio!!! -->
+    <script src="assets/javascript/app.js"></script>
 </body>
 
 </html>

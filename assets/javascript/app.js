@@ -9,52 +9,76 @@
 let right = 0
 let wrong = 0
 
-function chose() {
-    classList.add("chosen")
+// function chose() {
+    
+// }
+
+function uncheck() {
+    document.querySelectorAll("custom-control-input").checked = false;
+  }
+
+function reset() {
+    uncheck();
+    right = 0;
+    wrong = 0;
+    // document.getElementById("1customRadioInline2").classList.remove("chosen");
+    // document.getElementById("2customRadioInline3").classList.remove("chosen");
+    // document.getElementById("3customRadioInline1").classList.remove("chosen");
+    // document.getElementById("4customRadioInline4").classList.remove("chosen");
+    // document.getElementById("5customRadioInline2").classList.remove("chosen");
 }
 
-function results(){
-    document.getElementById("quest").innerHTML = "<h1>You got " + right + " questions right and " + wrong + " questions wrong!</h1>";
-document.createElement("button")
+function results() {
+    alert("You got " + right + " questions right and " + wrong + " questions wrong!");
+    reset();
 }
 
-document.getElementById("1customRadioInline2").addEventListener("change", chose())
-document.getElementById("2customRadioInline3").addEventListener("change", chose())
-document.getElementById("3customRadioInline1").addEventListener("change", chose())
-document.getElementById("4customRadioInline4").addEventListener("change", chose())
-document.getElementById("5customRadioInline2").addEventListener("change", chose())
+function startTime() {
+    setTimeout(checkAns, 5000);
+}
+
+// document.getElementById("1customRadioInline2").addEventListener("change", chose())
+// document.getElementById("2customRadioInline3").addEventListener("change", chose())
+// document.getElementById("3customRadioInline1").addEventListener("change", chose())
+// document.getElementById("4customRadioInline4").addEventListener("change", chose())
+// document.getElementById("5customRadioInline2").addEventListener("change", chose())
 
 
-
+let isCheck1 = document.getElementById("1customRadioInline2").checked
+let isCheck2 = document.getElementById("2customRadioInline3").checked
+let isCheck3 = document.getElementById("3customRadioInline1").checked
+let isCheck4 = document.getElementById("4customRadioInline4").checked
+let isCheck5 = document.getElementById("5customRadioInline2").checked
 
 
 
 function checkAns() {
-    if (document.getElementById("1customRadioInline2").contains("chosen")) {
+    
+    if (isCheck1 = true) {
         right++
     }
     else {
         wrong++
     }
-    if (document.getElementById("2customRadioInline3").contains("chosen")) {
+    if (isCheck2 = true) {
         right++
     }
     else {
         wrong++
     }
-    if (document.getElementById("3customRadioInline1").contains("chosen")) {
+    if (isCheck3 = true) {
         right++
     }
     else {
         wrong++
     }
-    if (document.getElementById("4customRadioInline4").contains("chosen")) {
+    if (isCheck4 = true) {
         right++
     }
     else {
         wrong++
     }
-    if (document.getElementById("5customRadioInline2").contains("chosen")) {
+    if (isCheck5) {
         right++
     }
     else {
@@ -63,5 +87,7 @@ function checkAns() {
     results()
 }
 
+document.getElementById("timer").addEventListener("click", startTime())
 
+document.getElementById("submit").addEventListener("click", checkAns())
 // Reset game upon clicking an 'ok' button on right/wrong screen (no refresh)
